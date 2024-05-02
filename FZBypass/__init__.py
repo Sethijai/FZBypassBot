@@ -22,13 +22,13 @@ BOT_START = time()
 
 
 class Config:
-    BOT_TOKEN = getenv("BOT_TOKEN", "")
-    API_HASH = getenv("API_HASH", "")
-    API_ID = getenv("API_ID", "")
+    BOT_TOKEN = getenv("BOT_TOKEN", "7007506846:AAE4RXsefzCviX6VaQNdp0k03yuG3NPdgHs")
+    API_HASH = getenv("API_HASH", "82b19751497d00e47c3032409d130423")
+    API_ID = getenv("API_ID", "29626867")
     if BOT_TOKEN == "" or API_HASH == "" or API_ID == "":
         LOGGER.critical("Variables Missing. Exiting Now...")
         exit(1)
-    AUTO_BYPASS = getenv("AUTO_BYPASS", "False").lower() == "true"
+    AUTO_BYPASS = getenv("AUTO_BYPASS", "True").lower() == "true"
     AUTH_CHATS = getenv("AUTH_CHATS", "").split()
     OWNER_ID = int(getenv("OWNER_ID", 0))
     DIRECT_INDEX = getenv("DIRECT_INDEX", "").rstrip("/")
